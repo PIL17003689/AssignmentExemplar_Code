@@ -14,6 +14,14 @@ namespace AssignmentExemplar_Code
         public string Progress { get; set; }
         public string TenantInformation { get; set; }
 
+        public Issues(Guid issue_Id, DateTime date, string description, string progress, string tenantInformation)
+        {
+            Issue_Id = issue_Id;
+            Date = date;
+            Description = description;
+            Progress = progress;
+            TenantInformation = tenantInformation;
+        }
 
         public void SubmitAnIssue(string Issue)
         {

@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace AssignmentExemplar_Code
 {
-    internal interface IProperties
+    public interface IProperties
     {
+        public Guid PropertyID { get; set; }
         public string StreetName { get; set; }
         public string CityName { get; set; }
         public string Address { get; set; }
