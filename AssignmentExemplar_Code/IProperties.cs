@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AssignmentExemplar_Code
 {
-    public interface IProperties
+    internal interface IProperties
     {
         public Guid PropertyID { get; set; }
         public string StreetName { get; set; }

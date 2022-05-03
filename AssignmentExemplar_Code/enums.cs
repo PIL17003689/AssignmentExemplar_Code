@@ -25,5 +25,16 @@ namespace AssignmentExemplar_Code
             INDUSTRIAL_UNIT,
             RETAIL
         }
+
+        public enum IssueSeverity
+        {
+            HIGH,
+            LOW
+        }
+        public enum StaffType
+        {
+            MANAGER,
+            TEAM_MEMBER
+        }
     }
 }

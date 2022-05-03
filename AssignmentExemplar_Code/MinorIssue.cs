@@ -3,31 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static AssignmentExemplar_Code.enums;
 
 namespace AssignmentExemplar_Code
 {
-    internal class Issues
+    public class MinorIssue : IIssues
     {
         public Guid Issue_Id { get; set; }
         public DateTime Date { get; set; }
         public string Description { get; set; }
         public string Progress { get; set; }
         public string TenantInformation { get; set; }
+        public IssueSeverity Severity { get; set; }
 
-        public Issues(Guid issue_Id, DateTime date, string description, string progress, string tenantInformation)
+        public MinorIssue(DateTime date, string description, string progress, string tenantInformation, IssueSeverity severity)
         {
-            Issue_Id = issue_Id;
+            Issue_Id = Guid.NewGuid();
             Date = date;
             Description = description;
             Progress = progress;
             TenantInformation = tenantInformation;
+            Severity = severity;
         }
 
-        public void SubmitAnIssue(string Issue)
+        public override string ToString()
         {
-            Console.WriteLine("Enter the issue: ");
-            Issue = Console.ReadLine();
+            return $"{Issue_Id} {Date} {Description} {Progress} {TenantInformation} {Severity}";
         }
-
     }
 }
